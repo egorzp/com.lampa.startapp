@@ -26,13 +26,13 @@
     
     NSString* scheme = [command.arguments objectAtIndex:0];
     
-    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:scheme]]) {
+//     if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:scheme]]) {
 		[[UIApplication sharedApplication] openURL:[NSURL URLWithString:scheme]];
         pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsBool:(true)];
-    }
-    else {
-        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsBool:(false)];
-    }
+//     }
+//     else {
+//         pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsBool:(false)];
+//     }
     
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
     
